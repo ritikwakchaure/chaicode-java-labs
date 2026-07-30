@@ -68,7 +68,7 @@ public final class CafeOrder {
         String input = """
                 4.50
                 3.25
-                2.00
+                // 2.00
                 DONE
                 """;
 
