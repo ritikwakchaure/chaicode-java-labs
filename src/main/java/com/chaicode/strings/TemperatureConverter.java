@@ -1,4 +1,4 @@
-package com.chaicode.methods;
+package com.chaicode.strings;
 
 /**
  * WeatherWise Temperature Converter

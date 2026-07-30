@@ -24,6 +24,30 @@ public final class ATMWithdrawal {
 
     public static int dispenseBills(int balance, int requested) {
         // Your code here
-        return 0;
+        if(balance < 0 || requested < 0|| requested % 20 !=0){
+            return -1;
+
+        }
+        int bill = 0;
+
+        while (requested >= 20 && balance-20>=20){
+            balance -=20;
+            requested-=20;
+             bill++;
+        }
+
+
+        return bill;
     }
+
+    public static void main(String[] args) {
+
+        System.out.println(dispenseBills(200, 100)); // 5
+        System.out.println(dispenseBills(80, 80));   // 3
+        System.out.println(dispenseBills(40, 40));   // 1
+        System.out.println(dispenseBills(50, 30));   // -1
+        System.out.println(dispenseBills(-10, 40));  // -1
+        System.out.println(dispenseBills(100, 90));  // -1
+    }
+
 }

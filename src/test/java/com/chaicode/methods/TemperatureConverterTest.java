@@ -3,6 +3,8 @@ package com.chaicode.methods;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import com.chaicode.strings.TemperatureConverter;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Methods - Temperature Converter")

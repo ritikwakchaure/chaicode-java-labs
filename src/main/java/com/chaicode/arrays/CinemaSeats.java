@@ -20,6 +20,7 @@ public final class CinemaSeats {
 
     public static int countAvailable(int[][] seats) {
         // Your code here
+        
         return 0;
     }
 }

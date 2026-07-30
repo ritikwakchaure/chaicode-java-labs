@@ -27,8 +27,32 @@ public final class EmployeeBadge {
 
     private EmployeeBadge() {}
 
-    public static String formatBadge(EmployeeProfile profile) {
+    public static String formatBadge(EmployeeProfile profile ) {
         // Your code here
-        return "";
+
+        String type = profile.isManager() ? "MANAGER" : "STAFF";
+
+        String id = String.format("%05d", profile.getEmployeeId());
+
+        return "[ID-" + id + "] "
+                + profile.getName()
+                + " | "
+                + profile.getDepartment()
+                + " | "
+                + type;
+
+
     }
+    EmployeeProfile emp =
+            new EmployeeProfile(
+                    "Priya Sharma",42,
+                    "Engineering",
+                    true
+            );
+
+    String badge = EmployeeBadge.formatBadge(emp);
+
+        System.out.println(badge);
+}
+
 }
