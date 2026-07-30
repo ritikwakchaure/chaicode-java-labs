@@ -23,6 +23,15 @@ public final class FitnessProfile {
 
     public static double calculateBmi(double weightKg, int heightCm) {
         // Your code here
-        return 0.0;
+
+        if(weightKg <=0 ||heightCm <=0){
+            return  -1.0;
+        }
+
+        double heightM = heightCm/ 100.0;
+        double bmi = weightKg / (heightM * heightM);
+
+        return Math.round(bmi * 10.0) /10.0;
+
     }
 }
