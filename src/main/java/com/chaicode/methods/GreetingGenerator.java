@@ -23,8 +23,36 @@ public final class GreetingGenerator {
 
     private GreetingGenerator() {}
 
-    public static String greet(String name, int hour) {
-        // Your code here
-        return "";
+    package com.chaicode.methods;
+
+    public final class GreetingGenerator {
+
+        private GreetingGenerator() {}
+
+        public static String greet(String name, int hour) {
+
+            // Check invalid hour
+            if (hour < 0 || hour > 23) {
+                return "Invalid hour";
+            }
+
+            // Check null or blank name
+            if (name == null || name.trim().isEmpty()) {
+                return "Hello, guest!";
+            }
+
+            // Remove extra spaces
+            name = name.trim();
+
+            if (hour >= 5 && hour <= 11) {
+                return "Good morning, " + name + "!";
+            } else if (hour >= 12 && hour <= 16) {
+                return "Good afternoon, " + name + "!";
+            } else if (hour >= 17 && hour <= 21) {
+                return "Good evening, " + name + "!";
+            } else {
+                return "Good night, " + name + "!";
+            }
+        }
     }
 }
